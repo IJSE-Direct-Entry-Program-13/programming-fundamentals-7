@@ -18,9 +18,10 @@ void main() {
 }
 
 String formatPrice(double price){
-    int integer = (int) price;
-    String precision = String.valueOf(price - integer).substring(2);
-    return "Rs. " + thousandGrouping(integer) + "." + formatPrecision(precision);
+    return "Rs. %,.2f".formatted(price);
+//    int integer = (int) price;
+//    String precision = String.valueOf(price - integer).substring(2);
+//    return "Rs. " + thousandGrouping(integer) + "." + formatPrecision(precision);
 }
 
 String formatPrecision(String number) {
